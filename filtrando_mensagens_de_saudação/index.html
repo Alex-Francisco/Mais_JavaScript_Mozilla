@@ -8,6 +8,13 @@
 </head>
 <body>
   <div class="output">
+    <p>No primeiro exercício, começaremos com simplicidade - temos várias mensagens de cartão, mas queremos classificá-las para listar apenas as mensagens de Natal. Queremos que você preencha um teste condicional dentro da estrutura if (...), para testar cada string e apenas imprimi-la na lista se for uma mensagem de Natal.</p>
+    <ol>
+      <li>Primeiro pense em como você poderia testar se a mensagem em cada caso é uma mensagem de Natal. Qual string está presente em todas essas mensagens e que método você poderia usar para testar se ela está presente?</li>
+      <li>Em seguida, você precisará escrever um teste condicional do formulario operando2 operador operando1. A coisa à esquerda é igual à coisa à direita? Ou neste caso, o método chama à esquerda retorna o resultado à direita?</li>
+      <li>Dica: Nesse caso, é provavelmente mais útil testar se a chamada do método não é igual a um determinado resultado.</li>
+    </ol>
+    <hr>
     <ul></ul>  
   </div>
 
@@ -24,7 +31,7 @@
       var input = greetings[i];
       // Seu teste condicional precisa ir dentro dos parênteses
       // na linha abaixo, substituindo o que está lá
-      if (greetings[i]) {
+      if (greetings[i].indexOf('Christmas') !== -1) {
         var result = input;
         var listItem = document.createElement('li');
         listItem.textContent = result;
