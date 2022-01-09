@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corrigindo a capitalização</title>
+</head>
+<body>
+  <div class="output">
+    <p>Neste exercício, temos os nomes das cidades no Reino Unido, mas a capitalização está toda desarrumada. Nós queremos que você as altere para que elas sejam todas minúsculas, exceto pela primeira letra maiúscula. Uma boa maneira de fazer isso é:.</p>
+    <ol>
+      <li>Converta toda a cadeia contida na variável de entrada para minúscula e armazene-a em uma nova variável.</li>
+      <li>Pegue a primeira letra da string nesta nova variável e armazene-a em outra variável.</li>
+      <li>Usando esta última variável como substring, substitua a primeira letra da string em minúsculas pela primeira letra da string em minúsculas alterada para maiúscula. Armazene o resultado desse procedimento de substituição em outra nova variável.</li>
+      <li>Altere o valor da variável result para igual ao resultado final, não a input.</li>
+    </ol>
+    <hr>
+    <ul></ul>  
+  </div>
+
+  <script>
+    let list = document.querySelector('.output ul');
+    list.innerHTML = '';
+    let cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+    for(let i = 0; i < cities.length; i++) {
+      let input = cities[i];
+      let minusculas = input.toLocaleLowerCase();
+      let primeiraLetra = minusculas.slice(0, 1);
+      let capitalizada = minusculas.replace(primeiraLetra, primeiraLetra.toLocaleUpperCase());
+      let result = capitalizada;
+      let listItem = document.createElement('li');
+      listItem.textContent = result;
+      list.appendChild(listItem);
+    }
+  </script>
+</body>
+</html>
